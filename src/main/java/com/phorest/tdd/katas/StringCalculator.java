@@ -13,6 +13,12 @@ public class StringCalculator {
             return Integer.parseInt(numbers[0]);
         }
 
+        if (numbers.length == 2) {
+            int firstNumber = Integer.parseInt(numbers[0]);
+            int secondNumber = Integer.parseInt(numbers[1]);
+            return firstNumber + secondNumber;
+        }
+
         throw new UnsupportedOperationException("not implemented yet");
     }
 
