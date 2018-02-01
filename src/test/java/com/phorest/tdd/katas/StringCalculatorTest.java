@@ -31,6 +31,17 @@ public class StringCalculatorTest {
 
         // then:
         assertThat(result, is(5));
+    }
 
+    @Test
+    public void shouldSumTwoNumbers() {
+        // given:
+        String numbers = "5,7";
+
+        // when:
+        int result = stringCalculator.add(numbers);
+
+        // then:
+        assertThat(result, is(12));
     }
 }
