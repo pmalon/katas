@@ -10,20 +10,28 @@ public class StringCalculator {
         String[] numbers = getNumbers(numbersString);
 
         if (numbers.length == 1) {
-            return Integer.parseInt(numbers[0]);
+            return getFirstNumber(numbers);
         }
 
         if (numbers.length == 2) {
-            int firstNumber = Integer.parseInt(numbers[0]);
-            int secondNumber = Integer.parseInt(numbers[1]);
+            int firstNumber = getFirstNumber(numbers);
+            int secondNumber = getNumberAtIndex(numbers, 1);
             return firstNumber + secondNumber;
         }
 
         throw new UnsupportedOperationException("not implemented yet");
     }
 
+    private int getFirstNumber(String[] numbers) {
+        return getNumberAtIndex(numbers, 0);
+    }
+
     private String[] getNumbers(String numbersString) {
         return numbersString.split(",");
+    }
+
+    private int getNumberAtIndex(String[] numbers, int idx) {
+        return numbers.length > idx ?  Integer.parseInt(numbers[idx]) : 0;
     }
 
 }
