@@ -44,4 +44,16 @@ public class StringCalculatorTest {
         // then:
         assertThat(result, is(12));
     }
+
+    @Test
+    public void shouldSumFiveNumbers() {
+        // given:
+        String numbers = "5,7,12,14,3";
+
+        // when:
+        int result = stringCalculator.add(numbers);
+
+        // then:
+        assertThat(result, is(41));
+    }
 }
