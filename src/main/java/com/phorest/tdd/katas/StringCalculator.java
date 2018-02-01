@@ -7,13 +7,17 @@ public class StringCalculator {
             return 0;
         }
 
-        String[] numbers = numbersString.split(",");
+        String[] numbers = getNumbers(numbersString);
 
         if (numbers.length == 1) {
             return Integer.parseInt(numbers[0]);
         }
 
         throw new UnsupportedOperationException("not implemented yet");
+    }
+
+    private String[] getNumbers(String numbersString) {
+        return numbersString.split(",");
     }
 
 }
