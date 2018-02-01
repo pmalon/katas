@@ -1,0 +1,25 @@
+# Intellij files
+*.ipr
+*.iml
+.idea
+.gradle
+build
+
+# Intellij workspace
+*.iws
+out/
+untitled/
+
+# Maven versions plugin
+*.versionsBackup
+
+# Maven artifacts
+target/
+
+# Dev artifacts
+MEMENTO_LOG_HOME_IS_UNDEFINED/
+ehcache.disk.store.dir/
+memento.cfg
+s3/
+MEMENTO_LOG_HOME_IS_UNDEFINED/
+tools/install4j/media/
