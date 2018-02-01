@@ -21,4 +21,16 @@ public class StringCalculatorTest {
         assertThat(result, is(0));
     }
 
+    @Test
+    public void shouldHandleSingleDigitNumbers() {
+        // given:
+        String numbers = "5";
+
+        // when:
+        int result = stringCalculator.add(numbers);
+
+        // then:
+        assertThat(result, is(5));
+
+    }
 }
